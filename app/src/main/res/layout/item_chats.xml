@@ -5,24 +5,23 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:id="@+id/userTV"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        app:srcCompat="@drawable/hello"
-        />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userIV"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/hello" />
 
     <TextView
         android:id="@+id/nameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kushal"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/userTV"
-        android:layout_toEndOf="@+id/userTV" />
+        android:textColor="@android:color/black"
+        android:layout_alignTop="@+id/userIV"
+        android:layout_toRightOf="@+id/userIV"
+        android:layout_toEndOf="@+id/userIV" />
 
     <TextView
         android:id="@+id/messageTV"
@@ -30,8 +29,8 @@
         android:layout_height="wrap_content"
         android:text="hello"
         android:layout_below="@+id/nameTV"
-        android:layout_toRightOf="@+id/userTV"
-        android:layout_toEndOf="@+id/userTV" />
+        android:layout_toRightOf="@+id/userIV"
+        android:layout_toEndOf="@+id/userIV" />
 
     <TextView
         android:id="@+id/lastMessageTV"
@@ -40,7 +39,9 @@
         android:text="10:3 PM"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/chat_time_color"
+        android:textSize="12sp"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -49,7 +50,10 @@
         android:text="10"
         android:layout_below="@+id/lastMessageTV"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:textColor="@android:color/white"
+        android:background="@drawable/round_corner_green"
+        android:textStyle="bold"/>
 
 
 </RelativeLayout>
