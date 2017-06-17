@@ -61,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         tabNames.add("CHATS");
         tabNames.add("STATUS");
         tabNames.add("CALLLS");
+
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager() , getFragments(), tabNames);
         mVpager.setAdapter(viewPagerAdapter);
     }
@@ -76,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
     private List<Fragment> getFragments(){
 
         mfragments = new ArrayList<Fragment>();
-        mfragments.add(ChatsFragment.newInstance(""));
-        mfragments.add(StatusFragment.newInstance(""));
-        mfragments.add(ChatsFragment.newInstance(""));
+        mfragments.add(ChatsFragment.newInstance(" "));
+        mfragments.add(StatusFragment.newInstance( ));
+        mfragments.add(CallsFragment.newInstance( ));
        return mfragments;
     }
 

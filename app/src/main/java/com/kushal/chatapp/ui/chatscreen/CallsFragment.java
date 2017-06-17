@@ -9,29 +9,26 @@ import android.view.ViewGroup;
 import com.kushal.chatapp.R;
 
 
-
 /**
  * Created by vihaan on 21/05/17.
  */
 
-public class StatusFragment extends Fragment {
+public class CallsFragment extends Fragment {
 
-
-    public static StatusFragment newInstance() {
+    public static CallsFragment newInstance() {
 
         Bundle args = new Bundle();
 
-        StatusFragment fragment = new StatusFragment();
+        CallsFragment fragment = new CallsFragment();
         fragment.setArguments(args);
         return fragment;
     }
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_status, container, false);
+        View view = inflater.inflate(R.layout.fragment_calls, container, false);
         return view;
     }
 
