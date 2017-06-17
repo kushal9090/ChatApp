@@ -53,7 +53,8 @@
         android:layout_alignParentEnd="true"
         android:textColor="@android:color/white"
         android:background="@drawable/round_corner_green"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:gravity="center"/>
 
 
 </RelativeLayout>
