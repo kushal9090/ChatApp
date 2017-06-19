@@ -11,6 +11,7 @@ import com.kushal.chatapp.R;
 import com.kushal.chatapp.ui.chatscreen.models.Chat;
 import com.kushal.chatapp.ui.chatscreen.models.Message;
 import com.kushal.chatapp.ui.chatscreen.models.User;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -39,6 +40,11 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
         Chat chat = mChats.get(position);
         User user = chat.getUser();
         Message message = chat.getMessage();
+
+        if(!TextUtils.isEmpty(user.getProfilePicUrl())){
+
+            Picasso.with(holder.userIV.getContext()).load(user.getProfilePicUrl()).into(holder.userIV);
+        }
 
         holder.nameTV.setText(user.getName());
         holder.messageTV.setText(message.getLastMessage());
