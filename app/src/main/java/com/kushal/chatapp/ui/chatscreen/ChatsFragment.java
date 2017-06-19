@@ -65,7 +65,7 @@ public static ChatsFragment newInstance(String tabName){
     private ChatsAdapter mAdapter;
 
     private void initRecyclerview(){
-     mRecyclerView = (RecyclerView) getView().findViewById(R.id.chatsrecylcerview);
+     mRecyclerView = (RecyclerView) getView().findViewById(R.id.chatsRecyclerView);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
     }

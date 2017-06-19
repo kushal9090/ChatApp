@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "605529651722",
+    "firebase_url": "https://friendlychat-78c53.firebaseio.com",
+    "project_id": "friendlychat-78c53",
+    "storage_bucket": "friendlychat-78c53.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605529651722:android:6f9c6697325b045c",
+        "android_client_info": {
+          "package_name": "com.kushal.chatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605529651722-5jj7n2oih56l7a0h9uva9m5qf08ntcit.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kushal.chatapp",
+            "certificate_hash": "c8f6fd3f069f39ec8eea309d8e412634ccfdf0f0"
+          }
+        },
+        {
+          "client_id": "605529651722-r87tq0250aj0oua814jm7s1opojb8lvf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGVLOjatnVD-B11ZaXcEXJDX67hIDNseY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605529651722-r87tq0250aj0oua814jm7s1opojb8lvf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
