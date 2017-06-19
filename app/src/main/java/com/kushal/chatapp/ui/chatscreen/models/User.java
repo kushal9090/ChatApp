@@ -1,5 +1,5 @@
 
-package com.example.vihaan.whatsappclone.ui.models;
+package com.kushal.chatapp.ui.chatscreen.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

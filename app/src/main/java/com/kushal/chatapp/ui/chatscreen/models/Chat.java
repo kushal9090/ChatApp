@@ -1,5 +1,5 @@
 
-package com.example.vihaan.whatsappclone.ui.models;
+package com.kushal.chatapp.ui.chatscreen.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -40,8 +40,8 @@ public class Chat implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeParcelable(this.user, flags);
-        dest.writeParcelable(this.message, flags);
+        dest.writeParcelable((Parcelable) this.user, flags);
+        dest.writeParcelable((Parcelable) this.message, flags);
     }
 
     public Chat() {

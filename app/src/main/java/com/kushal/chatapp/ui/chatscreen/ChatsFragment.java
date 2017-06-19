@@ -14,15 +14,12 @@ import com.google.gson.Gson;
 import com.kushal.chatapp.R;
 import com.kushal.chatapp.ui.chatscreen.models.ApiClient;
 import com.kushal.chatapp.ui.chatscreen.models.ApiInterface;
-import com.kushal.chatapp.ui.chatscreen.models.Chat;
 
 import java.util.ArrayList;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.kushal.chatapp.R.layout.fragment_chat;
 
 /**
  * Created by kusha on 6/16/2017.
@@ -82,7 +79,7 @@ public static ChatsFragment newInstance(String tabName){
 
                 Log.d("response:", response.body().toString());
                 Log.d("json response:", new Gson().toJson(response.body()));
-                mAdapter = new ChatsAdapter(response.body());
+                mAdapter = new ChatsAdapter(getActivity(), response.body());
                 mRecyclerView.setAdapter(mAdapter);
             }
 

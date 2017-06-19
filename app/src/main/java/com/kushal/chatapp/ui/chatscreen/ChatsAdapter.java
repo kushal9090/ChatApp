@@ -1,16 +1,16 @@
 package com.kushal.chatapp.ui.chatscreen;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.kushal.chatapp.R;
-import com.kushal.chatapp.ui.chatscreen.models.Chat;
-import com.kushal.chatapp.ui.chatscreen.models.Message;
-import com.kushal.chatapp.ui.chatscreen.models.User;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -23,9 +23,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHolder> {
     private List<Chat> mChats;
+    private Context mContext;
 
-    public ChatsAdapter(List<Chat> chats) {
+    public ChatsAdapter(Context context ,List<Chat> chats)
+    {
         mChats = chats;
+        mContext = context;
     }
 
     @Override
@@ -65,14 +68,15 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
         return mChats.size();
     }
 
-    public static  class ChatViewHolder extends RecyclerView.ViewHolder{
+    public class ChatViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-
+        RelativeLayout chatrLayout;
         CircleImageView userIV;
         TextView nameTV;
         TextView messageTV;
         TextView lastMessageTimeTV;
         TextView textView5;
+
 
         public ChatViewHolder(View itemView) {
             super(itemView);
@@ -82,6 +86,20 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
             messageTV =(TextView) itemView.findViewById(R.id.messageTV);
             lastMessageTimeTV =(TextView) itemView.findViewById(R.id.lastMessageTV);
              textView5 = (TextView) itemView.findViewById(R.id.textView5);
+             chatrLayout =(RelativeLayout) itemView.findViewById(R.id.chatrLayout);
+             chatrLayout.setOnClickListener(this);
+        }
+
+
+        @Override
+        public void onClick(View view) {
+
+        int position = getAdapterPosition();
+        if(position != RecyclerView.NO_POSITION){
+         Chat chat = mChats.get(position);
+            Intent intent = new Intent(mContext , ChatScreenActivity.class);
+            mContext.startActivity(intent);
+        }
 
         }
     }
