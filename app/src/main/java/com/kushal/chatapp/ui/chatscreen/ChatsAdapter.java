@@ -11,8 +11,12 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.kushal.chatapp.R;
+import com.kushal.chatapp.ui.chatscreen.models.Chat;
+import com.kushal.chatapp.ui.chatscreen.models.Message;
+import com.kushal.chatapp.ui.chatscreen.models.User;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -25,7 +29,7 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
     private List<Chat> mChats;
     private Context mContext;
 
-    public ChatsAdapter(Context context ,List<Chat> chats)
+    public ChatsAdapter(Context context , ArrayList<Chat> chats)
     {
         mChats = chats;
         mContext = context;
@@ -98,6 +102,8 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
         if(position != RecyclerView.NO_POSITION){
          Chat chat = mChats.get(position);
             Intent intent = new Intent(mContext , ChatScreenActivity.class);
+            intent.putExtra(ChatScreenActivity.EXTRAS_CHAT,chat);
+
             mContext.startActivity(intent);
         }
 

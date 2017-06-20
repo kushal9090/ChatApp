@@ -14,6 +14,7 @@ import com.google.gson.Gson;
 import com.kushal.chatapp.R;
 import com.kushal.chatapp.ui.chatscreen.models.ApiClient;
 import com.kushal.chatapp.ui.chatscreen.models.ApiInterface;
+import com.kushal.chatapp.ui.chatscreen.models.Chat;
 
 import java.util.ArrayList;
 
