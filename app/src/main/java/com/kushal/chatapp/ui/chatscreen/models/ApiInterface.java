@@ -11,6 +11,6 @@ import retrofit2.http.GET;
 
 public interface ApiInterface {
 
-    @GET("https://api.myjson.com/bins/gi0dj")
+    @GET("https://api.myjson.com/bins/18j0iz")
     Call<ArrayList<Chat>> getChats();
 }

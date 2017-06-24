@@ -19,7 +19,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="?actionBarSize">
 
                 <LinearLayout
                     android:id="@+id/conversation_image"
@@ -34,7 +34,7 @@
                         android:id="@+id/userIV"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/hello"
+                        android:src="@drawable/profile"
                         />
                 </LinearLayout>
 
