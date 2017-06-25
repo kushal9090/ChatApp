@@ -1,5 +1,6 @@
 package com.kushal.chatapp.ui.chatscreen;
 
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -32,6 +33,14 @@ public class ChatScreenActivity extends AppCompatActivity {
     }
     private void  initView(){
       initToolbar();
+      showFragment();
+    }
+
+    private void showFragment() {
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.replace(R.id.frameLayout , ChatScreenFragment.newInstance());
+        ft.commit();
+
     }
 
     private Chat mChat;

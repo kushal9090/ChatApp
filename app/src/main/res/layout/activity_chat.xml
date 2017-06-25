@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/default_wallpaper"
     android:fitsSystemWindows="true">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
@@ -13,7 +13,7 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="?actionBarSize"
             android:popupTheme="@style/AppTheme.AppBarOverlay"
             android:background="?attr/colorPrimary">
 
@@ -78,15 +78,18 @@
 
                 </LinearLayout>
 
-
-
-
             </RelativeLayout>
 
         </android.support.v7.widget.Toolbar>
 
+
     </android.support.design.widget.AppBarLayout>
 
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      android:layout_below="@+id/appbarLayout"></FrameLayout>
 
 
 </RelativeLayout>
