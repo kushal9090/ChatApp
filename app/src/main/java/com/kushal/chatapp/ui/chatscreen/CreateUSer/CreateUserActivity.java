@@ -69,9 +69,12 @@ public class CreateUserActivity extends AppCompatActivity implements View.OnClic
         mAuth.createUserWithEmailAndPassword(email , mUserName).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                hideProgressDialog();
+
 
                   if(task.isSuccessful()){
+                      hideProgressDialog();
+
+
                       Toast.makeText(CreateUserActivity.this , "Successful...." , Toast.LENGTH_LONG).show();
                       onAuthSuccess(task.getResult().getUser());
                       return;

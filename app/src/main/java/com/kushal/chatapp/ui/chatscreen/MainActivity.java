@@ -1,5 +1,6 @@
 package com.kushal.chatapp.ui.chatscreen;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -15,6 +16,7 @@ import android.view.MenuItem;
 
 import com.kushal.chatapp.R;
 import com.kushal.chatapp.ui.chatscreen.commonadapter.ViewPagerAdapter;
+import com.kushal.chatapp.ui.chatscreen.userlist.UserListActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(MainActivity.this , UserListActivity.class);
+                startActivity(intent);
             }
         });
     }

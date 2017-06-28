@@ -96,6 +96,7 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
              chatrLayout =(RelativeLayout) itemView.findViewById(R.id.chatrLayout);
              chatrLayout.setOnClickListener(this);
 
+
         }
 
 

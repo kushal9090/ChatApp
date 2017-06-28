@@ -14,7 +14,9 @@
         <activity
             android:name=".ui.chatscreen.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity
             android:name=".ui.chatscreen.CreateUSer.CreateUserActivity"
             android:label="@string/app_name"
@@ -29,7 +31,10 @@
             android:name=".ui.chatscreen.ChatScreenActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ui.chatscreen.userlist.UserListActivity"></activity>
+        <activity android:name=".ui.chatscreen.userlist.UserListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
