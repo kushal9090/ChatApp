@@ -2,11 +2,14 @@ package com.kushal.chatapp.ui.chatscreen;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -82,7 +85,7 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
         TextView textView5;
 
 
-        public ChatViewHolder(View itemView) {
+        public ChatViewHolder(final View itemView) {
             super(itemView);
 
            userIV = (CircleImageView) itemView.findViewById(R.id.userIV);
@@ -92,6 +95,7 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
              textView5 = (TextView) itemView.findViewById(R.id.textView5);
              chatrLayout =(RelativeLayout) itemView.findViewById(R.id.chatrLayout);
              chatrLayout.setOnClickListener(this);
+
         }
 
 
@@ -108,5 +112,10 @@ public class ChatsAdapter extends RecyclerView.Adapter<ChatsAdapter.ChatViewHold
         }
 
         }
+
+
+
+
     }
+
 }
