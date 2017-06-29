@@ -47,7 +47,9 @@ public class CreateUserActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.nextbtn:
-                onNextButtonClicked();
+              //  onNextButtonClicked();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
                 break;
         }
 
@@ -61,6 +63,7 @@ public class CreateUserActivity extends AppCompatActivity implements View.OnClic
             Toast.makeText(this, "User name can not be blank", Toast.LENGTH_LONG).show();
         }
     }
+
    private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
     private void createUser() {
@@ -69,6 +72,7 @@ public class CreateUserActivity extends AppCompatActivity implements View.OnClic
         mAuth.createUserWithEmailAndPassword(email , mUserName).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+
 
 
                   if(task.isSuccessful()){

@@ -33,7 +33,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.chatscreen.userlist.UserListActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/activity_user_list_label"
+            >
         </activity>
     </application>
 
